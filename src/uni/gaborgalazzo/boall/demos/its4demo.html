@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Script started on Fri Nov 16 14:30:56 2001</TITLE>
+</HEAD>
+<BODY>
+
+<FONT SIZE=2>Script started on Fri Nov 16 14:30:56 2001<BR>
+<B>[crandaj@node55-20 nsfsecurity]$</B> <I>cat spock.c<BR>
+</I>#include &lt;stdio.h&gt;<BR>
+#include &lt;string.h&gt;<BR>
+
+int PasswordOkay()<BR>
+&#9;{<BR>
+&#9;char GoodPassword = 'F';<BR>
+&#9;char Password [8];<BR>
+
+&#9;gets(Password);<BR>
+&#9;if (!strcmp(Password, "SPOCKSUX"))<BR>
+&#9;&#9;GoodPassword = 'T';<BR>
+&#9;return (GoodPassword == 'T');<BR>
+&#9;}<BR>
+
+void main()<BR>
+&#9;{<BR>
+&#9;puts("Enter Password:");<BR>
+&#9;if (PasswordOkay())<BR>
+&#9;&#9;puts("Hello, Dr. Bones.");<BR>
+&#9;else<BR>
+&#9;&#9;puts("Access denied.");<BR>
+&#9;}<BR>
+<B>[crandaj@node55-20 nsfsecurity]$</B> <I>gcc spock.c -o spock<BR>
+</I>spock.c: In function `main':<BR>
+spock.c:16: warning: return type of `main' is not `int'<BR>
+/tmp/ccSKfmN31.o: In function `PasswordOkay':<BR>
+/tmp/ccSKfmN31.o(.text+0xf): the `gets' function is dangerous and should not be used.<BR>
+<B>[crandaj@node55-20 nsfsecurity]$</B> <I>its4 spock.c<BR>
+</I>spock.c:9:(Urgent) gets<BR>
+The input buffer can almost always be overflowed.<BR>
+Use fgets(buf,size,stdin) instead.<BR>
+----------------<BR>
+<B>[crandaj@node55-20 nsfsecurity]$</B> <I>its4 spinshell.c<BR>
+</I>spinshell.c:37:(Urgent) fprintf<BR>
+Non-constant format strings can often be attacked.<BR>
+Use a constant format string.<BR>
+----------------<BR>
+spinshell.c:35:(Urgent) printf<BR>
+Non-constant format strings can often be attacked.<BR>
+Use a constant format string.<BR>
+----------------<BR>
+spinshell.c:25:(Very Risky) strcat<BR>
+This function is high risk for buffer overflows<BR>
+Use strncat instead.<BR>
+----------------<BR>
+spinshell.c:16:(Risky) fopen<BR>
+Can be involved in a race condition if you open things after a poor check. For<BR>
+example, don't check to see if something is not a symbolic link before opening<BR>
+it.  Open it, then check bt querying the resulting object.  Don't run tests on<BR>
+symbolic file names...<BR>
+Perform all checks AFTER the open, and based on the returned object, not a<BR>
+symbolic name.<BR>
+----------------<BR>
+<B>[crandaj@node55-20 nsfsecurity]$</B> <I>exit<BR>
+</I>exit<BR>
+
+Script done on Fri Nov 16 14:31:20 2001<BR></FONT></BODY>
+</HTML>

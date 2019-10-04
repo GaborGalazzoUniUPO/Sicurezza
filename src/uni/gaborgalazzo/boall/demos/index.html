@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<HEAD>
+
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.06 [en]C-gatewaynet  (Win98; I) [Netscape]">
+
+   <META NAME="Author" CONTENT="Jed Crandall/Susan Gerhart">
+
+   <META NAME="Description" CONTENT="Java applet animation of the widespread buffer overflow programming flaw and security attack.">
+
+   <META NAME="KeyWords" CONTENT="computer security, security education, buffer overflow, Code Red, worms, NSF Scholarships for service,">
+
+   <TITLE>Buffer Overflow demo: Embry-Riddle, NSF Scholarships for Service Grant</TITLE>
+
+<!-- saved from url=(0039)http://moon.pr.erau.edu/~crandaj/cs332/ -->
+
+</HEAD>
+<body bgcolor="#FFFFFF">
+<p><img src="modules.jpg" width="757" height="156" border="0"> 
+<table width="736" border="0" cellpadding="5" cellspacing="5">
+  <tr> 
+    <td height="504" align="left" valign="top"> 
+      <h2><font face="Georgia, Times New Roman, Times, serif">How do buffer overflow 
+        attacks work?</font></h2>
+      <blockquote> 
+        <p><font face="Georgia, Times New Roman, Times, serif"><i>A buffer overflow 
+          results from programming errors and testing failures and is common to 
+          all operating systems. These flaws permit attacking programs to gain 
+          control over other computers by sending long strings with certain patterns 
+          of data. Over half of the security advisories from <a
+
+href="http://www.cert.org">CERT</a>, e.g. the August 2001 "Code Red", trace to 
+          this widespread weakness of the software industry. This module of Java 
+          applets is developed to educate student and industrial programmers to 
+          avoid the practices that cause buffer overflows as one step controlling 
+          the continuing effects of this avoidable problem.</i> </font></p>
+        <p><font face="Georgia, Times New Roman, Times, serif"><b>Funding Source</b>: 
+          NSF Award No. 0113627,&nbsp; <a href="http://nsfsecurity.pr.erau.edu">"Increasing 
+          Security Expertise in Aviation-oriented Computing Education: A Modular 
+          Approach</a>", at Embry-Riddle Aeronautical University in Prescott, 
+          Arizona.&nbsp; </font> </p>
+        <p><font face="Georgia, Times New Roman, Times, serif">This module is 
+          still in progress with additional educational evaluation and technical 
+          content to be added. As is, <i>the module may be used by an instructor 
+          knowledgeable about runtime envrionments and C programming in classes 
+          such as: operating systems, C/C++ and assembly programming, compiler 
+          and software tools, surveys of programming languages, and computer security.</i> 
+          </font> </p>
+        <p><font face="Georgia, Times New Roman, Times, serif"><b>Contacts</b>: 
+          For questions, comments, or source code for the buffer overflow module, 
+          <a href="mailto:crandaj@erau.edu">Jed Crandall</a>. General comments 
+          and feedback to <a href="mailto:gerharts@erau.edu">Dr. Susan Gerhart.</a> 
+          </font> </p>
+        <p><font face="Georgia, Times New Roman, Times, serif"><b>Background reading</b>: 
+          For basic prerequisuite knowledge of buffer overflows a good reading 
+          is <a href="http://www.rsasecurity.com/rsalabs/technotes/buffer/buffer_overflow.html">http://www.rsasecurity.com/rsalabs/technotes/buffer/buffer_overflow.html</a>.&nbsp; 
+          </font> </p>
+        <p><font face="Georgia, Times New Roman, Times, serif"><b>Module Structure</b>: 
+          Each module uses an abstract machine with a small memory (on the right) 
+          showing the run-time stack. </font> </p>
+        <p><font face="Georgia, Times New Roman, Times, serif">For the abstract 
+          machine, there are some assumptions the user should be made aware of. 
+          (1) all library functions, such as gets() and puts(), are compiled inline 
+          and therefore don't require a function call, (2) allocation for a function's 
+          parameters and for its local variables takes place at the same time, 
+          and the return address is put on the stack last, (3) the stack grows 
+          "up" in memory, (4) it does not necessarily reflect the workings of 
+          any architecture or C compiler.&nbsp; </font> </p>
+        <p><font face="Georgia, Times New Roman, Times, serif"><b>Module Applets</b>: 
+          Each applet requires Java 1.3 plug-in. Click the animation buttons at 
+          the top. </font> </p>
+        <ul>
+          <li><font face="Georgia, Times New Roman, Times, serif"><a href="Jumps.html">Jumps</a>: 
+            An introduction to the way languages like C use stack frames to store 
+            local variables, pass variables from function to function by value 
+            and by reference, and also return control to the calling subroutine 
+            when the called subroutine exits.  This uses pseudocode  in             the place of C.&nbsp;</font></li>
+          <li><font face="Georgia, Times New Roman, Times, serif"><a href="Stacks.html">Stacks</a>: 
+            The same as above but using C instead of pseudocode.&nbsp;</font></li>
+          <li><font face="Georgia, Times New Roman, Times, serif"><a href="Spock.html">Spock</a>: 
+            Demonstrates what is commonly called a "variable attack" buffer overflow, 
+            where the target is data.&nbsp;</font></li>
+          <li><font face="Georgia, Times New Roman, Times, serif"><a href="Smasher.html">Smasher</a>: 
+            Demonstrates a "stack attack," more commonly refered to as "stack 
+            smashing."&nbsp;</font></li>
+          <li><font face="Georgia, Times New Roman, Times, serif"><a href="StackGuard.html">StackGuard</a>: 
+            This demo shows how the StackGaurd compiler can help prevent "stack 
+            attacks."&nbsp;</font></li>
+          <li><font face="Georgia, Times New Roman, Times, serif"><a href="bodemo.html">bodemo</a>: 
+            This is a mock attack on a linux system demonstrating how an attacker 
+            can get a root shell.&nbsp;</font></li>
+          <li><font face="Georgia, Times New Roman, Times, serif"><a href="its4demo.html">its4demo</a>: 
+            Shows the output of ITS4, a static analyzer, on two different C programs.&nbsp;</font></li>
+        </ul>
+      </blockquote>
+    </td>
+  </tr>
+</table>
+<H1><!-- #BeginLibraryItem "/Library/page footer.lbi" --><table width="756" border="0" cellpadding="5" cellspacing="5">
+  <tr>
+    <td>
+      <center>
+        <hr align="center" width="25%">
+      </center>
+<p><br>
+<p><font face="Arial,Helvetica"><font color="#006600"><font size=-1>&copy;&nbsp;Embry-Riddle Aeronautical University, 20 June 2002
+</font></font></font>
+    </td>
+  </tr>
+</table><!-- #EndLibraryItem --> 
+</H1>
+<H1>&nbsp;</H1>
+
+</BODY>
+
+</HTML>
+
+
+
