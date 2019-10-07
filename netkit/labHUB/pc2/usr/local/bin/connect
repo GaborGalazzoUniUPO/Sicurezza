@@ -1,0 +1,73 @@
+#!/usr/bin/expect -f
+
+log_user 0
+
+set argno [llength $argv]
+
+if { $argno != 2 }  {
+	send_user "Usage: connect username remote-host\r\n"
+	}  else  {
+	set hostname [lindex $argv 1]
+
+        switch -regexp -- $hostname {
+	(pc2|pc3) {
+	send_user "Connection refused by $hostname\r\n"
+	} pc1 {
+	set address "200.1.2.1" 
+	
+	set username [lindex $argv 0]
+
+	set file "$username-ssp.cif"
+	set cipher "-aes-128-ecb"
+	set opsslpwd "pippo-$username"
+
+	switch -regexp -- $username {	
+   	{user1|user3|user4} {
+		set timeout 20 
+		#If it all goes pear shaped the script will timeout after 20 seconds
+	
+		set password [exec openssl enc $cipher -d -pass pass:$opsslpwd -in /root/class/$file] 
+		spawn telnet  ${address} 
+		
+		send_user "$username connecting to pc1...\r\n"
+		expect "login:" 
+		send "$username\r" 
+		expect "Password:" 
+		send "$password\r" 
+		expect "$username@pc1:~$ "
+		send_user "connection established\r\n"
+		send "touch newfile\r"
+		expect "$username@pc1:~$ "
+		send_user "closing connection\r\n"
+		send "exit\r"
+		} {user2|user5} {
+		set timeout 2 
+		#If it all goes pear shaped the script will timeout after 2 seconds
+	
+		set password [exec openssl enc $cipher -d -pass pass:$opsslpwd -in /root/class/$file] 
+		spawn ssh  ${address} -l "$username"
+	
+		send_user "$username connecting to pc1...\r\n"
+		expect {
+		"Are you sure you want to continue connecting (yes/no)? " {send "yes\r"; exp_continue}
+		"$username@200.1.2.1's password: "  {send "$password\r"; exp_continue}
+			}
+		expect "$username@pc1:~$ "
+		send_user "connection established\r\n"
+		send "touch newfile\r"
+		expect "$username@pc1:~$ "
+		send_user "closing connection\r\n"
+		send "exit\r"
+		} default {
+		send_user "Sorry, $username is not available today. Try user1 through user5.\r\n"
+		}
+	}	
+	#end switch on $username
+	}  default {
+		send_user "$hostname: unknown host\r\n"
+	}
+}
+#end switch on $hostname
+}
+# end else on $argno
+

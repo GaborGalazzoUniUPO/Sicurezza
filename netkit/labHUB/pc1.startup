@@ -1,0 +1,18 @@
+/sbin/sysctl -w net.ipv4.ip_forward=0
+#/sbin/sysctl -w net.ipv4.conf.all.send_redirects=0
+#/sbin/sysctl -w net.ipv4.conf.default.send_redirects=0
+#/sbin/sysctl -w net.ipv4.conf.eth0.send_redirects=0
+ifconfig eth0 200.1.2.1 netmask 255.255.255.0 broadcast 200.1.2.255 up
+/etc/init.d/apache2 start
+/etc/init.d/inetd start
+/etc/init.d/ssh start
+chown user1:users /home/user1
+chown user2:users /home/user2
+chown user3:users /home/user3
+chown user4:users /home/user4
+chown user5:users /home/user5
+chown user6:users /home/user6
+chown user7:users /home/user7
+chown user8:users /home/user8
+chown user9:users /home/user9
+chown user10:users /home/user10
