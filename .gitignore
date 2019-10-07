@@ -12,6 +12,7 @@
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea
 
 # Generated files
 .idea/**/contentModel.xml
@@ -106,3 +107,4 @@ modules.xml
 hs_err_pid*
 
 # End of https://www.gitignore.io/api/java,intellij+iml
+netkit/*.disk
