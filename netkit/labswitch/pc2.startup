@@ -1,0 +1,6 @@
+/sbin/sysctl -w net.ipv4.ip_forward=0
+/sbin/sysctl -w net.ipv4.conf.all.send_redirects=0
+/sbin/sysctl -w net.ipv4.conf.default.send_redirects=0
+/sbin/sysctl -w net.ipv4.conf.eth0.send_redirects=0
+ifconfig eth0 200.1.2.2 netmask 255.255.255.0 broadcast 200.1.2.255 up
+chmod a+x /usr/local/bin/connect
