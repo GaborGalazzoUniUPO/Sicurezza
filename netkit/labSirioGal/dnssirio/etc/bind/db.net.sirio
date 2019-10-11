@@ -1,0 +1,17 @@
+$TTL 60000
+@               IN      SOA     dnssirio.sirio.net.    root.dnssirio.sirio.net. (
+                        2006031801 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        60000 ; negative cache ttl
+                        )
+@               IN      NS      dnssirio.sirio.net.
+@		IN	MX 5	mail.sirio.net.
+
+dnssirio        IN      A       199.99.99.33
+pcsirio		IN	A	199.99.99.42
+
+mail		IN	A	199.99.99.33
+imap		IN	A	199.99.99.33
+pop		IN	A	199.99.99.33

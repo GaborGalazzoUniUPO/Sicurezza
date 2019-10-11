@@ -1,0 +1,14 @@
+; reverse lookup database 
+$TTL    60000
+@               IN      SOA     33.200.200.200.in-addr.arpa.    nobody.nowhere. (
+                        2006031801 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@                               IN      NS      33.200.200.200.in-addr.arpa.
+33.200.200.200.in-addr.arpa.    IN      A      200.200.200.33 
+
+33	PTR        dnsgal.galactica.org.
+42	PTR        pcgal.galactica.org.

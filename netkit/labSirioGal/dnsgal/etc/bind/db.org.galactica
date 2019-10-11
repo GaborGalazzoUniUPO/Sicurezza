@@ -1,0 +1,17 @@
+$TTL    60000
+@               IN      SOA     dnsgal.galactica.org.    root.dnsgal.galactica.org. (
+                        2006031801 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        60000 ; negative cache ttl
+                        )
+@               IN      NS      dnsgal.galactica.org.
+@		IN	MX 5	mail.galactica.org.
+
+dnsgal          IN      A       200.200.200.33
+pcgal		IN	A	200.200.200.42
+
+imap		IN	A	200.200.200.33
+pop		IN	A	200.200.200.33
+mail		IN 	A 	200.200.200.33

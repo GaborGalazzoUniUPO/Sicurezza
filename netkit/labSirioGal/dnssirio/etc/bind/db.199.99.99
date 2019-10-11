@@ -1,0 +1,14 @@
+; reverse lookup database 
+$TTL    60000
+@               IN      SOA     33.99.99.199.in-addr.arpa.    nobody.nowhere. (
+                        2006031801 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@                               IN      NS      33.99.99.199.in-addr.arpa.
+33.99.99.199.in-addr.arpa.    IN      A      199.99.99.33 
+
+33	PTR        dnssirio.sirio.net.
+42	PTR        pcsirio.sirio.net.

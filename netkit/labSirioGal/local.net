@@ -1,0 +1,61 @@
+
+Starting Nmap 4.68 ( http://nmap.org ) at 2019-10-11 08:47 UTC
+Interesting ports on 193.0.14.1:
+Not shown: 1714 closed ports
+PORT    STATE SERVICE
+111/tcp open  rpcbind
+MAC Address: 0A:AB:64:91:09:80 (Unknown)
+Device type: general purpose
+Running: Linux 2.6.X
+OS details: Linux 2.6.11 - 2.6.20
+Uptime: 0.015 days (since Fri Oct 11 08:25:07 2019)
+Network Distance: 1 hop
+
+Interesting ports on 193.0.14.9:
+Not shown: 1714 closed ports
+PORT    STATE SERVICE
+111/tcp open  rpcbind
+Device type: general purpose
+Running: Linux 2.6.X
+OS details: Linux 2.6.17 - 2.6.20
+Uptime: 0.015 days (since Fri Oct 11 08:26:08 2019)
+Network Distance: 0 hops
+
+Interesting ports on dnsroot (193.0.14.129):
+Not shown: 1713 closed ports
+PORT    STATE SERVICE
+53/tcp  open  domain
+111/tcp open  rpcbind
+MAC Address: 96:59:56:09:55:54 (Unknown)
+Device type: general purpose
+Running: Linux 2.6.X
+OS details: Linux 2.6.11 - 2.6.20
+Uptime: 0.015 days (since Fri Oct 11 08:25:13 2019)
+Network Distance: 1 hop
+
+Interesting ports on dnsnet.net (193.0.14.199):
+Not shown: 1713 closed ports
+PORT    STATE SERVICE
+53/tcp  open  domain
+111/tcp open  rpcbind
+MAC Address: DA:B5:36:A0:EB:96 (Unknown)
+Device type: general purpose
+Running: Linux 2.6.X
+OS details: Linux 2.6.11 - 2.6.20
+Uptime: 0.015 days (since Fri Oct 11 08:25:28 2019)
+Network Distance: 1 hop
+
+Interesting ports on dnsorg.org (193.0.14.200):
+Not shown: 1713 closed ports
+PORT    STATE SERVICE
+53/tcp  open  domain
+111/tcp open  rpcbind
+MAC Address: 4E:DD:3C:05:C0:55 (Unknown)
+Device type: general purpose
+Running: Linux 2.6.X
+OS details: Linux 2.6.11 - 2.6.20
+Uptime: 0.015 days (since Fri Oct 11 08:25:21 2019)
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 256 IP addresses (5 hosts up) scanned in 9.464 seconds

@@ -1,0 +1,13 @@
+$TTL    60000
+@               IN      SOA     dnsnet.net.    root.dnsnet.net. (
+                        2006031801 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        60000 ; negative cache ttl
+                        )
+@                   IN      NS      dnsnet.net.
+dnsnet              IN      A       193.0.14.199
+
+sirio           IN      NS      dnssirio.sirio.net.
+dnssirio.sirio  IN      A      199.99.99.33

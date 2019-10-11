@@ -1,0 +1,4 @@
+/sbin/sysctl -w net.ipv4.ip_forward=0
+/sbin/ifconfig eth0 199.99.99.42 netmask 255.255.255.0 broadcast 199.99.99.255 up
+route add default gw 199.99.99.1 dev eth0
+

@@ -1,0 +1,13 @@
+$TTL   60000
+@               IN      SOA     dnsorg.org.    root.dnsorg.org. (
+                        2006031801 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        60000 ; negative cache ttl
+                        )
+@                   IN      NS      dnsorg.org.
+dnsorg              IN      A       193.0.14.200
+
+galactica            IN      NS      dnsgal.galactica.org.
+dnsgal.galactica     IN      A       200.200.200.33
