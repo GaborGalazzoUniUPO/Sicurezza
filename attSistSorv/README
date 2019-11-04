@@ -1,0 +1,29 @@
+L'obbiettivo e' protetto da un sistema di sorveglianza.
+Il sistema di sorveglianza e' diviso in 4 zone.
+In ogni zona ci sono una lampada e una telecamera.
+Per raggiungere l'obbiettivo bisogna passare dalla zona 2, avendo prima disattivato la telecamera.
+
+Osservando l'obbiettivo si vede se la lampada di ogni zona e' accesa (o) 
+o spenta (x), 
+e se la telecamera e' girata a destra (->) o a sinistra (<-). 
+La situazione iniziale e' questa (le zone sono elencate dalla 1 piu' a sinistra
+alla 4 piu' a destra:
+o <-   x <-   o ->   x ->   
+(zona 1: lampada accesa e telecamera girata verso sinistra; zona 2: lampada spenta e telecamera girata a sinistra; zona 3: lampada accesa, telecamera verso destra; zona 4: lampada spenta, telecamera verso destra).
+Non c'e' modo di sapere se una telecamera e' accesa o spenta.
+
+Le lampade e le telecamere sono comandate a distanza, con comandi
+cifrati con DES-ECB.
+Si sa che la struttura dei messaggi e':
+caratteri da 0 a 7: comando;
+caratteri da 8 a 15: dispositivo;
+caratteri da 16 a 23: area.
+I comandi sono attiva, disattiva, sinistra, destra (gli ultimi due non hanno senso per le lampade).
+
+I messaggi 1-5 vengono intercettati in sequenza.
+Il programma SistSorv.jar simula l'effetto di mandare il messaggio scritto in esadecimale nel file msg, quando lo stato e' come descritto nel file stato.
+Per eseguire il programma:
+java -jar SistSorv.jar
+(i file stato e msg devono essere nella directory dalla quale si esegue il programma)
+Il programma aggiorna lo stato del sistema di sorveglianza sul file stato (e lo mostra in output)
+Dare un qualunque argomento aggiuntivo sulla linea di comando ha l'effetto di tentare di raggiungere l'obbiettivo.
