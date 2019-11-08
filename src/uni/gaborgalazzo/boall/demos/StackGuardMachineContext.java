@@ -126,7 +126,7 @@ public class StackGuardMachineContext extends MachineContext
 			HighlightedLine = 6;
 			bNeedInput = true;
 			InputStart = 0xCA;
-			sExplanation = "Now is where you can use the text box above to give input to the program and click 'Play' or 'Step Forward' to resume";
+			sExplanation = "Now is where you can use the text box above to give input.txt to the program and click 'Play' or 'Step Forward' to resume";
 		break;
 		case 6:
 			PCStart = 0x2E;

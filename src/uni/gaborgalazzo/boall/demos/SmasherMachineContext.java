@@ -128,7 +128,7 @@ public class SmasherMachineContext extends MachineContext
 			HighlightedLine = 6;
 			bNeedInput = true;
 			InputStart = 0xCA;
-			sExplanation = "Now is where you can use the text box above to give input to the program and click 'Play' or 'Step Forward' to resume";
+			sExplanation = "Now is where you can use the text box above to give input.txt to the program and click 'Play' or 'Step Forward' to resume";
 		break;
 		case 6:
 			PCStart = 0x2E;
@@ -171,7 +171,7 @@ public class SmasherMachineContext extends MachineContext
 			PCStart = 0x6A;
 			PCStop = 0x6A;
 			HighlightedLine = 14;
-			sExplanation = "An attacker could get their code into memory, on the stack or the heap, by using you're program's input routines";
+			sExplanation = "An attacker could get their code into memory, on the stack or the heap, by using you're program's input.txt routines";
 		return false;
 		case 40:
 			PCStart = 0x43;
